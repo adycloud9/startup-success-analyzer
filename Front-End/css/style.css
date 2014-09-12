@@ -1,0 +1,289 @@
+body{
+	font-family: "Roboto", sans-serif;
+	font-size: 14px;
+	font-weight: 500;
+}
+
+ul{ list-style: none; margin:0; padding:0; }
+
+#notepad{
+	position: absolute;
+	z-index: 10;
+	width: 90%;
+	top: 20px;
+	left: 72px;
+	color: #333;
+	font-family: "Roboto", sans-serif;
+	font-size: 18px;
+	letter-spacing: -0.008em;
+	-webkit-font-smoothing: antialiased;	
+}
+
+#notepad p{
+	font-size:22px;
+}
+
+td{
+	font-size:18px;
+	color:#444;
+}
+
+th{
+	font-size:20px;
+}
+
+th, td{
+	text-align:left;
+	padding: 10px 20px;
+}
+.small{
+	font-size:20px;
+	color:#777;
+}
+
+.large{
+	font-size:26px;
+	color:#2980b9;
+}
+
+
+#visualization .noteNav, #visualization.title #titleScreen{
+	opacity: 1;
+	visibility: visible;
+ 	-webkit-transition: opacity 1s;
+    transition: opacity 1s;
+}
+
+
+#visualization.title .noteNav, #visualization #titleScreen{
+	opacity: 0;
+	visibility: hidden;
+}
+
+
+#visualization{
+	position: relative;
+	width: 100%;
+	overflow: hidden;
+	background:#fff;
+}
+
+#titleScreen{
+	background-color:#fff;
+	background-size:100% 100%;
+	width:100%;
+	height:100%;
+	position:absolute;
+	top:0;left:0;
+}
+
+#chartInfo{
+	position:absolute;
+	width:96%;
+	right: 140px;
+	top:100px;
+	z-index: 9;
+	text-align:right;
+}
+
+#chartInfo .title{
+	font-size:20px;
+}
+
+#notepad.title .noteNav{
+	opacity:0;
+	visibility: hidden;
+}
+
+.titlePiece{
+	font-weight: 900;
+	font-size:56px;
+	margin-top:150px;
+	color:#ddd;
+}
+
+.note{
+	margin-top:55px;
+	clear:both;
+}
+
+h3.noteNav {
+	font-size:18px;
+	color:#87919b;
+	font-weight:700;
+	margin: 0 0 10px;
+	line-height:36px;
+	float:left;
+}
+
+#nextButton, #prevButton{
+	background-image: url(../img/slide_tool_icns.png);
+	background-repeat:no-repeat;
+	width: 36px;
+	height:36px;
+	position: absolute;
+	top:0;
+	border-radius:36px;
+	background-color:#e1e8ef;
+	opacity:0.4;
+	cursor: pointer;
+ 	-webkit-transition: background-color 0.3s, opacity 0.5s;
+    transition: background-color 0.3s, opacity 0.5s;
+}
+
+#startButton{
+	width:60px;
+	height:60px;
+	background-position: 8px 6px;
+	border-radius:60px;
+	background-color:#eee;
+	background-image: url(../img/play_icon.png);
+	display: inline-block;
+	margin: 0 0 0 20px;
+	opacity:0.8;
+ 	-webkit-transition: background-color 0.3s, opacity 0.5s;
+    transition: background-color 0.3s, opacity 0.5s;
+	cursor: pointer;
+	position: relative;
+	top:12px;
+}
+
+#startButton:hover{
+	opacity:1;
+	background-color:transparent;
+}
+
+#nextButton:hover, #prevButton:hover{
+	opacity: 1;
+	background-color: transparent;
+}
+
+#nextButton{
+	background-position: -17px 6px;
+	left:720px;
+}
+
+#prevButton{
+	background-position: 5px 6px;
+	left:-56px;
+}
+
+#slideList{
+	margin: 12px 0 0 20px;
+	float: left;
+	position: relative;
+}
+
+#slideList li{
+	float: left;
+	width: 12px;
+	height: 12px;
+	color: #000;
+	font: 300 8px/12px 'Arial';
+	text-align: center;
+	margin-right: 8px;
+	background-color: #a9b3bc;
+	cursor: pointer;
+	-webkit-border-radius: 12px;
+	-moz-border-radius: 12px;
+	-ms-border-radius: 12px;
+	-o-border-radius: 12px;
+	border-radius: 12px;
+ 	-webkit-transition: background-color 0.3s;
+    transition: background-color 0.3s;
+
+}
+
+#slideList li.selected{
+	background-color:#1993ff;
+}
+
+.label{
+	display:inline-block;
+	padding: 4px 10px;
+	color:#fff;
+	border-radius: 2px;
+	margin: 0 5px;
+	font-size: 16px;
+}
+
+#svg{
+
+}
+
+
+/*
+	SVG
+*/
+
+.axis path,
+.axis line {
+    fill: none;
+    stroke: #eee;
+    stroke-width: 2;
+    shape-rendering: crispEdges;
+}
+
+#svg text{
+	font-family: "Roboto", sans-serif;
+	font-size: 15px;
+	fill: #888;
+ 	-webkit-transition: all 0.2s;
+    transition: all 0.2s;	
+	-webkit-font-smoothing: antialiased;
+}
+
+#svg .triangle:hover{
+	opacity: 1;
+
+}
+
+
+#svg .triangle:hover + text{
+	fill: #222;
+	font-size:28px;
+}
+
+#svg text.strong{
+	font-size: 18px;
+	color:#111;
+}
+
+#svg rect:hover + text{
+	fill: #222;
+	font-size:24px;
+}
+
+#svg .line {
+  fill: none;
+  stroke-width: 3px;
+}
+
+.success{
+	fill: #2ecc71;
+	background-color: #2ecc71;
+}
+
+.potential{
+	fill: #f1c40f;
+	background-color: #f1c40f;
+}
+
+
+.fail{
+	fill: #e74c3c;
+	background-color: #e74c3c;
+}
+
+.focus{
+	background-color: #34495e;	
+}
+
+#chart.success .fail, #chart.success .potential{
+	opacity:0.1;
+}
+
+#svg circle.success:hover + circle.fail{
+	opacity: 0;
+}
+

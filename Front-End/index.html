@@ -1,0 +1,42 @@
+<!doctype html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>Identifying Startups with Growth Potential</title>
+
+	<!-- <link href='http://fonts.googleapis.com/css?family=Roboto:400,300,700,400italic,500,900' rel='stylesheet' type='text/css'> -->
+
+	<link rel="stylesheet" href="css/normalize.css">
+	<link rel="stylesheet" href="css/style.css">
+</head>
+<body>
+	<div id="visualization" class="title">
+		
+		<div id="chartInfo">
+			<p class="title"></p>
+			<p class="labels"></p>
+		</div>
+		<div id="notepad">
+			<h3 class="noteNav">Startup Acquisition and Investment Prediction</h3>
+			<div id="slideTools" class="noteNav">
+				<div id="nextButton"></div>
+				<div id="prevButton"></div>
+			</div>
+			<ul id="slideList" class="noteNav">
+			</ul>
+			
+			<div class="note" style="opacity:0">
+				<p class="titlePiece">The Startup Scene <a id="startButton"></a> </p>
+			</div>
+
+		</div>
+		<svg id="svg" width="900" height="500"></svg>
+
+		<div id="titleScreen"></div>
+	</div>
+
+	<script src="js/jquery-2.1.1.min.js"></script>
+	<script src="js/d3.min.js"></script>
+	<script src="js/app.js"></script>
+</body>
+</html>
